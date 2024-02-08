@@ -1,0 +1,19 @@
+### create a new post
+POST http://localhost:3333/polls HTTP/1.1
+content-type: application/json
+
+{
+    "title": "what is the best frameword",
+    "options": ["next js", "ban", "node"]
+}
+###
+### get poll
+GET http://localhost:3333/polls/ee90c1ce-7662-499f-8623-ceb0ac2722b3
+
+###
+POST http://localhost:3333/polls/ee90c1ce-7662-499f-8623-ceb0ac2722b3/vote  HTTP/1.1
+content-type: application/json
+
+{
+    "pollOptionId": "8c264b9d-37e3-42a2-b272-fe4f2f1c4dcb"
+}
